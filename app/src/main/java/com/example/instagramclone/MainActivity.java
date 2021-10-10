@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -73,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
+                // on some click or some loading we need to wait for...
+                ProgressBar pb = (ProgressBar) findViewById(R.id.pbLoading);
+                pb.setVisibility(ProgressBar.VISIBLE);
                 savePost(description, currentUser, photoFile);
             }
         });
@@ -159,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "Post save was successful!!");
                 etDescription.setText("");
                 ivPostImage.setImageResource(0);
+                // run a background job and once complete
+                ProgressBar pb = (ProgressBar) findViewById(R.id.pbLoading);
+                pb.setVisibility(ProgressBar.INVISIBLE);
             }
         });
     }
