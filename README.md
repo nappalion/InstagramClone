@@ -2,7 +2,7 @@
 
 **InstagramClone** is a photo sharing app similar to Instagram but using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
@@ -17,7 +17,7 @@ The following **optional** features are implemented:
 
 - [x] User sees app icon in home screen and styled launch screen that looks like the real Instagram page.
 - [ ] Style the feed to look like the real Instagram feed.
-- [ ] After the user submits a new post, show an indeterminate progress bar while the post is being uploaded to Parse.
+- [x] After the user submits a new post, show an indeterminate progress bar while the post is being uploaded to Parse.
 
 The following **additional** features are implemented:
 
@@ -33,7 +33,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The emulator would always be stuck on Installing or Targetting Online Devices. I would need to either wipe data or run a cold boot to fix the problem. There were some difficulties with the videos, but Slack and the Youtube comments helped solve my problems.
 
 ## Open-source libraries used
 
