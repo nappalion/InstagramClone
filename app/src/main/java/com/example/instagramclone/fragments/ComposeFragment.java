@@ -53,6 +53,7 @@ public class ComposeFragment extends Fragment {
     private Button btnSubmit;
     private File photoFile;
     public String photoFileName = "photo.jpg";
+    ProgressBar pb;
 
     public ComposeFragment() {
         // Required empty public constructor
@@ -76,6 +77,7 @@ public class ComposeFragment extends Fragment {
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
+        pb = view.findViewById(R.id.pbLoading);
 
 
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +102,6 @@ public class ComposeFragment extends Fragment {
                 }
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 // on some click or some loading we need to wait for...
-                ProgressBar pb = (ProgressBar) view.findViewById(R.id.pbLoading);
                 pb.setVisibility(ProgressBar.VISIBLE);
                 savePost(description, currentUser, photoFile);
             }
@@ -174,7 +175,6 @@ public class ComposeFragment extends Fragment {
                 etDescription.setText("");
                 ivPostImage.setImageResource(0);
                 // run a background job and once complete
-                ProgressBar pb = (ProgressBar) getView().findViewById(R.id.pbLoading);
                 pb.setVisibility(ProgressBar.INVISIBLE);
             }
         });
