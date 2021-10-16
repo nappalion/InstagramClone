@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_like"
+        android:icon="@drawable/ufi_heart_icon"
+        android:title="Like"
+        app:showAsAction="always"
+        android:padding="10dp"/>
+    <item
+        android:id="@+id/action_comment"
+        android:icon="@drawable/ufi_comment_icon"
+        android:title="Comment"
+        app:showAsAction="always"
+        android:padding="10dp"/>
+    <item
+        android:id="@+id/action_direct"
+        android:icon="@drawable/ufi_direct_icon"
+        android:title="Direct"
+        app:showAsAction="always"
+        android:padding="10dp"/>
+</menu>
