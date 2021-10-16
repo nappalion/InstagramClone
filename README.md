@@ -42,7 +42,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ### Notes
 
-Describe any challenges encountered while building the app.
+I couldn't figure out how to set a unique profile picture per user. I attempted to add a "profilePicture" column to the User class in back4app, but I couldn't access it.
 
 ### Open-source libraries used
 
